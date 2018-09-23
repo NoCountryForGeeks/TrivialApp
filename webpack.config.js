@@ -119,7 +119,7 @@ const developmentConfiguration = () =>
         cssLoader({ use: cssLoaderStrategy({ hashedLocalIndentName: false }) }),
         devServer({
             host: '0.0.0.0',
-            port: 8080,
+            port: 3663,
             open: false,
             stats: 'errors-only'
         }),
@@ -165,7 +165,7 @@ const productionConfiguration = () =>
             generateStatsFile: true,
             statsFilename: `${PATHS.REPORTFOLDER}/${PATHS.ANALYZERSTATS}`
         }),
-        banner({ 
+        banner({
             exclude: /\.svg$/,
             banner: `NC4G \nVersion: ${new GitRevisionPlugin().version()}`
         }),
